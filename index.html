@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Love Battle: Birthday Edition</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main">
+<div class="game-container">
+  
+    <div class="health-bar">
+      <div id="hero-health" class="health">❤️❤️❤️</div>
+      <div id="villain-health" class="health">💔💔💔</div>
+    </div>
+   
+  <div class="arena">
+     <img class="bg-image" src="bg.jpg" alt="Background" />
+  <img id="hero" src="hero.png" class="character hero" />
+  <img id="villain" src="villen.png" class="character villain" />
+</div>
+    </div>
+     </div>
+    <div class="controls">
+      <button onclick="move('left')">⬅️</button>
+      <button onclick="fight()">⚔️ Fight</button>
+      <button onclick="move('right')">➡️</button>
+    </div>
+   <div id="love-line" class="love-line hidden"></div>
+
+  </div>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+    body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top, #ffdde1, #ee9ca7);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    }
+
+.game-container {
+ 
+  background-repeat: no-repeat;
+  background-size: cover; /* Or use `100% auto` or `contain` if needed */
+  background-position: center 80%; /* Adjust this to align the road */
+  
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Hide anything outside */
+  z-index: 99;
+
+}
+
+
+
+/* Make image freely movable */
+.bg-image {
+  position: absolute;
+
+top:20px;
+  left: -20px; /* Move image left/right */
+  width: 600px; /* You can scale it bigger */
+  height: auto;
+  z-index: 0; /* Behind other elements */
+  pointer-events: none; /* So it doesn't block clicks */
+  overflow: hidden;
+}
+
+    .health-bar {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+    font-size: 20px;
+    }
+
+    .arena {
+    position: relative;
+    height: 250px;
+
+    border: 3px solid #000000;
+    margin: 10px;
+    overflow: hidden; /* allow character overflow */
+    border-radius: 20px;
+    }
+
+    .character {
+    position: absolute;
+    width: 60px; /* smaller character size for mobile */
+    bottom: 0;
+    transition: left 0.2s, transform 0.2s;
+    z-index: 10;
+    }
+
+    .hero {
+    left: 50px;
+    }
+
+    /* Fix villain positioning - use left to match JS positioning */
+    .villain {
+    left: 350px;
+    }
+
+    .controls {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    }
+
+    button {
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: background 0.3s;
+    }
+
+    button:hover {
+    background: #ffd6d6;
+    }
+
+    .love-line {
+    margin-top: 20px;
+    background: rgba(255,255,255,0.8);
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 18px;
+    color: #c0392b;
+    font-weight: bold;
+    }
+
+    .hidden {
+    display: none;
+    }
+
+    .message {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    animation: fadeInOut 2s ease-in-out;
+    z-index: 9999;
+    pointer-events: none; /* So it won't block clicks */
+    }
+
+    @keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(10px); }
+    }
+
+    .restart-button {
+    display: block;
+    margin: 20px auto 0;
+    font-size: 18px;
+    padding: 10px 25px;
+    background-color: #fff;
+    border: 2px solid #c0392b;
+    color: #c0392b;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, color 0.3s;
+    }
+
+    .restart-button:hover {
+    background-color: #c0392b;
+    color: white;
+    }
+.main{
+    width: 100VW;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-message {
+  position: absolute;
+  top: 50px;
+  
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 12px 20px;
+  border-radius: 15px;
+  font-size: 16px;
+  color: #c0392b;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0%   { opacity: 0; transform: translateY(-10px); }
+  10%  { opacity: 1; transform: translateY(0); }
+  90%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
