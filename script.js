@@ -7,7 +7,7 @@ const loveLine = document.getElementById("love-line");
 let heroDead = false;
 
 // Set villain position
-let villainPos = 350;
+let villainPos = 250;
 villain.style.left = villainPos + "px";
 
 // Funny messages when hero hits villain
